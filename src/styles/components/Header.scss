@@ -1,0 +1,12 @@
+.header {
+  background-color: black;
+
+  &__figure {
+    width: 60%;
+    margin: 0px auto;
+
+    &-logo {
+      width: 100%;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import '../styles/core/reset.scss';
+import '../styles/App.scss';
 import getCharacters from '../services/api';
 import Header from './Header';
 import Filters from './Filters';
@@ -28,9 +29,8 @@ const App = () => {
   return (
     <>
       <Header />
-      <main>
+      <main className="main">
         <Filters onChangeFilterName={handleFilterName} />
-
         <Routes>
           <Route path="/" element={<CharacterList dataCharacters={filteredCharacters} />} />
           <Route
