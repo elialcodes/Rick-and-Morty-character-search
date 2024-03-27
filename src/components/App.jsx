@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-// import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation, matchPath } from 'react-router-dom';
 import getCharacters from '../services/api';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
+import CharacterDetail from './CharacterDetail';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -25,10 +26,21 @@ const App = () => {
     return character.name.toLowerCase().includes(filterCharacters.toLowerCase());
   });
 
+  const { pathname } = useLocation();
+  const characterDetailRoute = matchPath('/character/:idCharacter', pathname);
+  const idCharacter = characterDetailRoute ? characterDetailRoute.params.idCharacter : null;
+  const characterDetailData = characters.find((character) => character.id === idCharacter);
+
   return (
     <main>
       <Filters onChangeFilterName={handleFilterName} />
       <CharacterList dataCharacters={filteredCharacters} />
+      <Routes>
+        <Route
+          path="/character/:idCharacter"
+          element={<CharacterDetail dataCharacters={characterDetailData} />}
+        />
+      </Routes>
     </main>
   );
 };

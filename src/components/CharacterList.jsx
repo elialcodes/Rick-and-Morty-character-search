@@ -12,6 +12,7 @@ function CharacterList({ dataCharacters }) {
     </section>
   );
 }
+
 CharacterList.propTypes = {
   dataCharacters: PropTypes.array,
 };
