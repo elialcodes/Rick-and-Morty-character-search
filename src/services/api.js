@@ -1,20 +1,26 @@
 // Fichero src/services/api.js
 
-const callToApi = () => {
+const getCharacters = () => {
   // Llamamos a la API
-  return fetch('https://swapi.dev/api/people/5') // Este 5 es el id de Leia Skywalker
+  return fetch(
+    'https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json'
+  )
     .then((response) => response.json())
-    .then((response) => {
+    .then((data) => {
       // Cuando responde la API podemos limpiar los datos aquí, aunque no es obligatorio
-      const result = {
-        name: response.name,
-        birthYear: response.birth_year,
-        height: response.height,
-        mass: response.mass,
-        eyeColor: response.eye_color,
-      };
-      return result;
+      const charactersFromAppi = data.results.map((character) => {
+        return {
+          id: character.id,
+          name: character.name,
+          status: character.status,
+          species: character.species,
+          origin: character.origin.name,
+          image: character.image,
+          episodes: character.episodes,
+        };
+      });
+      return charactersFromAppi;
     });
 };
 
-export default callToApi;
+export default getCharacters;
