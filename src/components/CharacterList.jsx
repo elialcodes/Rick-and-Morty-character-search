@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import '../styles/components/CharacterList.scss';
 import CharacterCard from './CharacterCard';
 
 function CharacterList({ dataCharacters }) {
   return (
     <section>
-      <ul>
+      <ul className="list">
         {dataCharacters.map((character) => {
           return <CharacterCard key={character.id} character={character} />;
         })}

@@ -1,0 +1,8 @@
+.list {
+  padding-bottom: 100px;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  row-gap: 50px;
+}

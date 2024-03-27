@@ -4,7 +4,8 @@ import '../styles/core/reset.scss';
 import '../styles/App.scss';
 import getCharacters from '../services/api';
 import Header from './Header';
-import Filters from './Filters';
+import FilterName from './FilterName';
+import FilterGender from './FilterGender';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
 
@@ -29,8 +30,10 @@ const App = () => {
   return (
     <>
       <Header />
-      <main className="main">
-        <Filters onChangeFilterName={handleFilterName} />
+      <main>
+        <h2 className="title">Search your favorite character</h2>
+        <FilterName onChangeFilterName={handleFilterName} />
+        <FilterGender />
         <Routes>
           <Route path="/" element={<CharacterList dataCharacters={filteredCharacters} />} />
           <Route

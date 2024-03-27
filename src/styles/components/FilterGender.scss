@@ -1,0 +1,20 @@
+.form__gender {
+  color: white;
+  background-color: black;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+
+  &-title {
+    margin-right: 20px;
+  }
+
+  &-label {
+    margin-right: 10px;
+  }
+
+  &-input {
+    border: 2px solid aqua;
+    margin-right: 30px;
+  }
+}
