@@ -14,9 +14,9 @@ const getCharacters = () => {
           name: character.name,
           status: character.status,
           species: character.species,
-          origin: character.origin.name,
+          location: character.location.name,
           image: character.image,
-          episodes: character.episodes,
+          episode: character.episode,
         };
       });
       return charactersFromAppi;

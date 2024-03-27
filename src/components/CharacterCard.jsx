@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 function CharacterCard({ character }) {
   return (
     <li>
-      <Link to={`/character/${character.id}`}>
-        <div id={character.id}>
+      <Link to={`/characterDetail/${character.id}`}>
+        <div>
           <img src={character.image} alt={character.name} />
-          <p>{character.name}</p>
-          <p>{character.species}</p>
+          <p>{`Name: ${character.name}`}</p>
+          <p>{`Specie: ${character.species}`}</p>
         </div>
       </Link>
     </li>
