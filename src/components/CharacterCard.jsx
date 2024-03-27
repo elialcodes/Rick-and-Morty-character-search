@@ -13,7 +13,7 @@ function CharacterCard({ character }) {
 }
 
 CharacterCard.propTypes = {
-  characters: PropTypes.object,
+  character: PropTypes.object,
 };
 
 export default CharacterCard;

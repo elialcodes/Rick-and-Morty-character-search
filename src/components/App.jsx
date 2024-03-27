@@ -1,15 +1,12 @@
-// Fichero src/components/App.jsx, componente principal de la web
-
 import { useEffect, useState } from 'react';
 // import { Route, Routes } from 'react-router-dom';
-import getCharacters from '../services/api'; // Importamos el servicio que acabamos de crear
+import getCharacters from '../services/api';
+import Filters from './Filters';
 import CharacterList from './CharacterList';
+
 const App = () => {
-  // Estados
-
   const [characters, setCharacters] = useState([]);
-
-  // Llamar a la api con useEffect
+  const [filterCharacters, setFilterCharacters] = useState('');
 
   useEffect(() => {
     // Dentro de useEffect llamamos a la API que está en la carpeta services
@@ -20,10 +17,19 @@ const App = () => {
     // Aquí ponemos un array vacío porque solo queremos que se llame a la API la primera vez
   }, []);
 
+  const handleFilterName = (value) => {
+    setFilterCharacters(value);
+  };
+
+  const filteredCharacters = characters.filter((character) => {
+    return character.name.toLowerCase().includes(filterCharacters.toLowerCase());
+  });
+
   return (
-    <>
-      <CharacterList dataCharacters={characters} />
-    </>
+    <main>
+      <Filters onChangeFilterName={handleFilterName} />
+      <CharacterList dataCharacters={filteredCharacters} />
+    </main>
   );
 };
 
