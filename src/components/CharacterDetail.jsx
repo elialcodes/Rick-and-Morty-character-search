@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/components/CharacterDetail.scss';
 
 function CharacterDetail({ characters }) {
@@ -10,7 +11,9 @@ function CharacterDetail({ characters }) {
 
   return (
     <div className="detail">
-      <button className="detail__button">Back</button>
+      <Link to="/">
+        <button className="detail__button">Back</button>
+      </Link>
       <div className="detail__card">
         <img src={characterData.image} alt={characterData.name} />
         <div className="detail__card--text">
