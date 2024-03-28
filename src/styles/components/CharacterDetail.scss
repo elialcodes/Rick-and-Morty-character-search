@@ -5,9 +5,12 @@
   gap: 30px;
 
   &__button {
-    width: 70px;
+    width: 90px;
     margin-bottom: 30px;
     background-color: white;
+    color: black;
+    font-size: 16px;
+    text-align: center;
     border: 2px solid aqua;
     padding: 3px 8px;
     cursor: pointer;

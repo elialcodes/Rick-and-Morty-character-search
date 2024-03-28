@@ -12,7 +12,9 @@ function CharacterDetail({ characters }) {
   return (
     <div className="detail">
       <Link to="/">
-        <button className="detail__button">Back</button>
+        <button className="detail__button">
+          <i className="fa-solid fa-chevron-left"></i> Back
+        </button>
       </Link>
       <div className="detail__card">
         <img src={characterData.image} alt={characterData.name} />
