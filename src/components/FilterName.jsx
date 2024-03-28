@@ -7,21 +7,19 @@ function FilterName({ onChangeFilterName, valueName }) {
   };
 
   return (
-    <>
-      <form className="form__name">
-        <label htmlFor="name" className="form__name-label">
-          Filter by name:
-        </label>
-        <input
-          className="form__name-input"
-          type="text"
-          id="name"
-          value={valueName}
-          placeholder=" Name..."
-          onChange={handleInputName}
-        />
-      </form>
-    </>
+    <div className="form__name">
+      <label htmlFor="name" className="form__name-label">
+        Filter by name:
+      </label>
+      <input
+        className="form__name-input"
+        type="text"
+        id="name"
+        value={valueName}
+        placeholder=" Name..."
+        onChange={handleInputName}
+      />
+    </div>
   );
 }
 

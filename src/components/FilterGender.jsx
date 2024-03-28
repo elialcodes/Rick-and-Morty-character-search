@@ -8,7 +8,7 @@ function FilterGender({ onChangeFilterGender, valueGender }) {
   };
 
   return (
-    <form className="form__gender">
+    <div className="form__gender">
       <span className="form__gender-title">Filter by gender: </span>
       <label className="form__gender-label" htmlFor="female">
         Female
@@ -34,7 +34,7 @@ function FilterGender({ onChangeFilterGender, valueGender }) {
         checked={valueGender === 'Male'}
         onChange={handleInputGender}
       />
-    </form>
+    </div>
   );
 }
 

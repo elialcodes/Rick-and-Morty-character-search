@@ -1,17 +1,28 @@
 * {
   font-family: 'Courier New', Courier, monospace;
 }
+
 main {
   background-color: black;
 }
+
 .title {
   color: lightgreen;
   text-align: center;
   margin-bottom: 20px;
 }
+
 .button__reset {
-  margin: 0px auto;
+  width: 70px;
   background-color: white;
   border: 2px solid aqua;
+  margin-top: 10px;
   padding: 3px 8px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }

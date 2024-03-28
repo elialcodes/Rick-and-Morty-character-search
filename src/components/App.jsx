@@ -55,20 +55,27 @@ const App = () => {
     <>
       <Header />
       <main>
-        <h2 className="title">Search your favorite character</h2>
-        <FilterName onChangeFilterName={handleFilterName} valueName={filterName} />
-        <FilterGender onChangeFilterGender={handleFilterGender} valueGender={filterGender} />
-        <button className="button__reset" onClick={handleReset}>
-          Reset
-        </button>
         <Routes>
           <Route
             path="/"
             element={
-              <CharacterList
-                dataCharacters={filteredCharacters}
-                notFoundCharacters={notFoundCharacters}
-              />
+              <>
+                <h2 className="title">Search your favorite character</h2>
+                <form className="filters">
+                  <FilterName onChangeFilterName={handleFilterName} valueName={filterName} />
+                  <FilterGender
+                    onChangeFilterGender={handleFilterGender}
+                    valueGender={filterGender}
+                  />
+                  <button className="button__reset" onClick={handleReset}>
+                    Reset
+                  </button>
+                </form>
+                <CharacterList
+                  dataCharacters={filteredCharacters}
+                  notFoundCharacters={notFoundCharacters}
+                />
+              </>
             }
           />
           <Route

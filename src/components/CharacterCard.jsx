@@ -3,15 +3,6 @@ import { Link } from 'react-router-dom';
 import '../styles/components/CharacterCard.scss';
 
 function CharacterCard({ character }) {
-  // const iconOrigin = (character) => {
-  //   if (character.species === 'Alien') {
-  //     return '👽';
-  //   } else {
-  //     return character.species;
-  //   }
-  // };
-  // // <i class="fa-brands fa-reddit-alien"></i>
-
   return (
     <li className="card">
       <Link to={`/characterDetail/${character.id}`}>
@@ -24,7 +15,7 @@ function CharacterCard({ character }) {
             <p>
               Specie:{' '}
               {character.species === 'Alien' ? (
-                <i class="fa-brands fa-reddit-alien"></i>
+                <i className="fa-brands fa-reddit-alien"></i>
               ) : (
                 character.species
               )}
