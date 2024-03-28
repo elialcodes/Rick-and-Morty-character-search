@@ -12,6 +12,7 @@ import CharacterDetail from './CharacterDetail';
 const App = () => {
   const [characters, setCharacters] = useState([]);
   const [filterCharacters, setFilterCharacters] = useState('');
+  // const [notFoundCharacters, setNotFoundCharacters] = useState('');
 
   useEffect(() => {
     getCharacters().then((charactersData) => {
@@ -27,6 +28,8 @@ const App = () => {
     return character.name.toLowerCase().includes(filterCharacters.toLowerCase());
   });
 
+  const notFoundCharacters = filteredCharacters.length === 0 ? 'Sorry, character not found' : '';
+
   return (
     <>
       <Header />
@@ -35,7 +38,15 @@ const App = () => {
         <FilterName onChangeFilterName={handleFilterName} />
         <FilterGender />
         <Routes>
-          <Route path="/" element={<CharacterList dataCharacters={filteredCharacters} />} />
+          <Route
+            path="/"
+            element={
+              <CharacterList
+                dataCharacters={filteredCharacters}
+                notFoundCharacters={notFoundCharacters}
+              />
+            }
+          />
           <Route
             path="/characterDetail/:id"
             element={<CharacterDetail characters={characters} />}

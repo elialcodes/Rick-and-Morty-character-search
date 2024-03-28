@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import '../styles/components/CharacterList.scss';
 import CharacterCard from './CharacterCard';
 
-function CharacterList({ dataCharacters }) {
+function CharacterList({ dataCharacters, notFoundCharacters }) {
   return (
     <section>
       <ul className="list">
@@ -10,6 +10,7 @@ function CharacterList({ dataCharacters }) {
           return <CharacterCard key={character.id} character={character} />;
         })}
       </ul>
+      <h2 className="message__noFound">{notFoundCharacters}</h2>
     </section>
   );
 }
