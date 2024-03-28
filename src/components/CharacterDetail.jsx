@@ -15,7 +15,14 @@ function CharacterDetail({ characters }) {
         <h4>{`Name: ${characterData.name}`}</h4>
         <p>{`Specie: ${characterData.species}`}</p>
         <p>{`Origin: ${characterData.location}`}</p>
-        <p>{`Status: ${characterData.status}`}</p>
+        <p>
+          Status:
+          {characterData.status === 'Dead' ? (
+            <i className="fa-solid fa-skull"></i>
+          ) : (
+            characterData.status
+          )}
+        </p>
         <p>{`Number of episodes: ${characterData.episode.length}`}</p>
       </div>
     </div>
