@@ -1,12 +1,21 @@
 .header {
+  width: 100%;
   background-color: black;
 
   &__figure {
-    width: 60%;
+    width: 80%;
     margin: 0px auto;
 
     &-logo {
       width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      width: 60%;
+    }
+
+    @media (min-width: 1024px) {
+      width: 40%;
     }
   }
 }

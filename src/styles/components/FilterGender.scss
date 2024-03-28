@@ -2,18 +2,29 @@
   color: white;
   background-color: black;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 
   &-title {
-    margin-right: 20px;
+    margin-left: 20px;
   }
-
-  &-label {
-    margin-right: 10px;
-  }
-
   &-input {
-    border: 2px solid aqua;
-    margin-right: 30px;
+    display: flex;
+    justify-content: end;
+
+    &-input-label {
+      margin: 0px 0px 20px 0px;
+      @media (min-width: 768px) {
+        margin-right: 20px;
+      }
+    }
+
+    &-input1,
+    &-input2 {
+      border: 2px solid aqua;
+      margin-right: 10px;
+      @media (min-width: 768px) {
+        margin-right: 25px;
+      }
+    }
   }
 }

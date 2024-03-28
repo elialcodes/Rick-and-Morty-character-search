@@ -1,20 +1,27 @@
 .form__name {
   color: white;
   background-color: black;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
 
   &-label {
-    margin-right: 20px;
+    margin: 0px 20px;
+    @media (min-width: 768px) {
+      margin-right: 20px;
+    }
   }
 
   &-input {
-    width: 250px;
+    width: 200px;
+    margin-right: 20px;
     margin-bottom: 10px;
-    margin-right: 10px;
     background-color: black;
     color: lightgreen;
     border: 2px solid aqua;
-    padding: 3px;
+    padding: 5px;
+    @media (min-width: 768px) {
+      width: 250px;
+    }
   }
 }
