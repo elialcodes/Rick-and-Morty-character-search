@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import '../styles/components/FilterName.scss';
 
-function FilterName({ onChangeFilterName }) {
+function FilterName({ onChangeFilterName, valueName }) {
   const handleInputName = (event) => {
     onChangeFilterName(event.target.value);
   };
@@ -16,6 +16,7 @@ function FilterName({ onChangeFilterName }) {
           className="form__name-input"
           type="text"
           id="name"
+          value={valueName}
           placeholder=" Name..."
           onChange={handleInputName}
         />
@@ -26,6 +27,7 @@ function FilterName({ onChangeFilterName }) {
 
 FilterName.propTypes = {
   onChangeFilterName: PropTypes.func,
+  valueName: PropTypes.string,
 };
 
 export default FilterName;

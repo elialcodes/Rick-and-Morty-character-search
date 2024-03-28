@@ -13,6 +13,7 @@ const getCharacters = () => {
           id: character.id,
           name: character.name,
           status: character.status,
+          gender: character.gender,
           species: character.species,
           location: character.location.name,
           image: character.image,
