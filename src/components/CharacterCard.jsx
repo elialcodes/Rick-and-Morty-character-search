@@ -4,10 +4,12 @@ import '../styles/components/CharacterCard.scss';
 
 function CharacterCard({ character }) {
   return (
-    <li>
+    <li className="card">
       <Link to={`/characterDetail/${character.id}`}>
-        <div className="card">
-          <img src={character.image} alt={character.name} />
+        <div>
+          <figure>
+            <img src={character.image} alt={character.name} />
+          </figure>
           <div className="card__text">
             <p>{`Name: ${character.name}`}</p>
             <p>{`Specie: ${character.species}`}</p>
