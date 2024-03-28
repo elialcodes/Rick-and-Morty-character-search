@@ -38,9 +38,15 @@ const App = () => {
       return character.name.toLowerCase().includes(filterName.toLowerCase());
     })
     .filter((character) => {
-      return filterGender === 'Female'
-        ? character.gender === 'Female'
-        : character.gender === 'Male';
+      if (filterGender === '') {
+        return characters;
+      }
+      if (filterGender === 'Female') {
+        return character.gender === 'Female';
+      }
+      if (filterGender === 'Male') {
+        return character.gender === 'Male';
+      }
     });
 
   const notFoundCharacters = filteredCharacters.length === 0 ? 'Sorry, character not found' : '';

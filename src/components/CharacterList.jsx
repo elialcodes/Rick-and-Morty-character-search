@@ -17,6 +17,7 @@ function CharacterList({ dataCharacters, notFoundCharacters }) {
 
 CharacterList.propTypes = {
   dataCharacters: PropTypes.array,
+  notFoundCharacters: PropTypes.string,
 };
 
 export default CharacterList;

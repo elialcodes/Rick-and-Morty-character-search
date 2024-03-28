@@ -3,6 +3,16 @@ import { Link } from 'react-router-dom';
 import '../styles/components/CharacterCard.scss';
 
 function CharacterCard({ character }) {
+  const icon = (character) => {
+    if (character.species === 'Alien') {
+      return '👽';
+    } else {
+      return character.species;
+    }
+  };
+
+  // const icon = character.species === 'Alien' ? '👽' : character.species;
+
   return (
     <li className="card">
       <Link to={`/characterDetail/${character.id}`}>
@@ -12,7 +22,7 @@ function CharacterCard({ character }) {
           </figure>
           <div className="card__text">
             <p>{`Name: ${character.name}`}</p>
-            <p>{`Specie: ${character.species}`}</p>
+            <p>Specie: {icon(character)}</p>
           </div>
         </div>
       </Link>

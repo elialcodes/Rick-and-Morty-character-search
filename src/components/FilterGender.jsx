@@ -4,6 +4,7 @@ import '../styles/components/FilterGender.scss';
 function FilterGender({ onChangeFilterGender, valueGender }) {
   const handleInputGender = (event) => {
     onChangeFilterGender(event.target.value);
+    console.log(event.target.value);
   };
 
   return (
@@ -15,10 +16,10 @@ function FilterGender({ onChangeFilterGender, valueGender }) {
       <input
         className="form__gender-input"
         type="radio"
-        name="gender"
+        name="female"
         id="female"
         value="Female"
-        checked={valueGender}
+        checked={valueGender === 'Female'}
         onChange={handleInputGender}
       />
       <label className="form__gender-label" htmlFor="male">
@@ -27,9 +28,10 @@ function FilterGender({ onChangeFilterGender, valueGender }) {
       <input
         className="form__gender-input"
         type="radio"
-        name="gender"
+        name="male"
         id="male"
         value="Male"
+        checked={valueGender === 'Male'}
         onChange={handleInputGender}
       />
     </form>
