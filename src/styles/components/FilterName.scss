@@ -1,12 +1,12 @@
 .form__name {
   color: white;
   background-color: black;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: flex;
   justify-content: center;
 
   &-label {
-    margin: 0px 20px;
+    margin-right: 20px;
     @media (min-width: 768px) {
       margin-right: 20px;
     }
@@ -14,7 +14,6 @@
 
   &-input {
     width: 200px;
-    margin-right: 20px;
     margin-bottom: 10px;
     background-color: black;
     color: lightgreen;

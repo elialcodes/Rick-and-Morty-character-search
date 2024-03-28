@@ -15,7 +15,8 @@
     text-align: center;
     border: 2px solid aqua;
     padding: 3px 8px;
-    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: box-shadow 0.3s ease;
 
     @media (min-width: 768px) {
       width: 90px;
@@ -24,6 +25,13 @@
       padding: 3px 8px;
       cursor: pointer;
     }
+  }
+
+  &__button:hover {
+    background-color: aqua;
+    box-shadow: 5px 5px 10px lightgreen;
+    border: 2px solid black;
+    font-weight: 600;
   }
 
   &__card {
