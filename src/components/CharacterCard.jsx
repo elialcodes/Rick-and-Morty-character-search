@@ -11,9 +11,11 @@ function CharacterCard({ character }) {
             <img src={character.image} alt={character.name} />
           </figure>
           <div className="card__text">
-            <p>{`Name: ${character.name}`}</p>
             <p>
-              Specie:{' '}
+              <strong>{character.name}</strong>
+            </p>
+            <p>
+              Specie:
               {character.species === 'Alien' ? (
                 <i className="fa-brands fa-reddit-alien"></i>
               ) : (

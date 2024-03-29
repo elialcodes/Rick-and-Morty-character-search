@@ -23,6 +23,11 @@ function CharacterDetail({ characters }) {
   if (!characterData) {
     return (
       <div className="notFound">
+        <Link to="/">
+          <button className="detail__button">
+            <i className="fa-solid fa-chevron-left"></i> Back
+          </button>
+        </Link>
         <p className="notFound__messagge">Sorry, character not found</p>
       </div>
     );
@@ -38,7 +43,9 @@ function CharacterDetail({ characters }) {
       <div className="detail__card">
         <img src={characterData.image} alt={characterData.name} />
         <div className="detail__card--text">
-          <h3>{`Name: ${characterData.name}`}</h3>
+          <h3>
+            <strong>{characterData.name}</strong>
+          </h3>
           <p>
             Specie:{' '}
             {characterData.species === 'Alien' ? (

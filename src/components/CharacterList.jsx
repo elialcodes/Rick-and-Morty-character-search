@@ -4,13 +4,13 @@ import CharacterCard from './CharacterCard';
 
 function CharacterList({ dataCharacters, notFoundCharacters }) {
   return (
-    <section>
-      <ul className="list">
+    <section className="list">
+      <ul className="list__characters">
         {dataCharacters.map((character) => {
           return <CharacterCard key={character.id} character={character} />;
         })}
       </ul>
-      <h2 className="message__noFound">{notFoundCharacters}</h2>
+      <h2 className="list__message-noFound">{notFoundCharacters}</h2>
     </section>
   );
 }
