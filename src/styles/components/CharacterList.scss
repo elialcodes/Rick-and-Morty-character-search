@@ -1,8 +1,6 @@
 .list {
-  height: 60vh;
-
   &__characters {
-    padding: 25px 25px 100px 25px;
+    padding: 25px 25px 50px 25px;
     background-color: black;
     display: grid;
     grid-template-columns: 1fr 1fr;

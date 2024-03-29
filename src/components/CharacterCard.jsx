@@ -15,7 +15,7 @@ function CharacterCard({ character }) {
               <strong>{character.name}</strong>
             </p>
             <p>
-              Specie:
+              Specie:{' '}
               {character.species === 'Alien' ? (
                 <i className="fa-brands fa-reddit-alien"></i>
               ) : (
