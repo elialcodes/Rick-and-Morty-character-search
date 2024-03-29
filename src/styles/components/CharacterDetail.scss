@@ -14,8 +14,9 @@
     text-align: center;
     border: 2px solid aqua;
     padding: 3px 8px;
-    transition: background-color 0.3s ease;
-    transition: box-shadow 0.3s ease;
+    transition: background-color 0.5s ease;
+    transition: box-shadow 0.5s ease;
+    transition: border 0.5s ease;
 
     @media (min-width: 768px) {
       width: 90px;

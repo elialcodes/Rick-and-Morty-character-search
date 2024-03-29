@@ -4,7 +4,6 @@ import '../styles/components/FilterGender.scss';
 function FilterGender({ onChangeFilterGender, valueGender }) {
   const handleInputGender = (event) => {
     onChangeFilterGender(event.target.value);
-    console.log(event.target.value);
   };
 
   return (

@@ -4,9 +4,11 @@
   margin-bottom: 8px;
   display: flex;
   justify-content: center;
+  align-items: baseline;
 
   &-label {
     margin-right: 20px;
+    font-size: 18px;
 
     @media (min-width: 768px) {
       margin-right: 20px;
@@ -17,6 +19,7 @@
     width: 200px;
     margin-bottom: 10px;
     background-color: black;
+    font-size: 18px;
     color: lightgreen;
     border: 2px solid aqua;
     padding: 5px;
