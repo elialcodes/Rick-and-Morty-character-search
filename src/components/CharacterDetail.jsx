@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import '../styles/components/CharacterDetail.scss';
@@ -7,23 +7,25 @@ import localStorage from '../services/localStorage';
 
 function CharacterDetail({ characters }) {
   const { id } = useParams();
-  const [characterData, setCharacterData] = useState(null);
+
+  const savedCharacter = localStorage.get('character');
+  const characterData =
+    savedCharacter && parseInt(savedCharacter.id) === parseInt(id)
+      ? savedCharacter
+      : characters.find((character) => character.id === parseInt(id));
 
   useEffect(() => {
-    const savedCharacter = localStorage.get('character');
-    if (savedCharacter && savedCharacter.id === parseInt(id)) {
-      setCharacterData(savedCharacter);
-    } else {
-      const foundCharacter = characters.find((character) => character.id === parseInt(id));
-      if (foundCharacter) {
-        localStorage.set('character', foundCharacter);
-        setCharacterData(foundCharacter);
-      }
+    if (characterData && savedCharacter.id !== characterData.id) {
+      localStorage.set('character', characterData);
     }
-  }, [characters, id]);
+  }, [savedCharacter, characterData]);
 
   if (!characterData) {
-    return <div>Loading...</div>;
+    return (
+      <div className="notFound">
+        <p className="notFound__messagge">Sorry, character not found</p>
+      </div>
+    );
   }
 
   return (
