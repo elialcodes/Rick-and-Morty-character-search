@@ -1,13 +1,30 @@
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import '../styles/components/CharacterDetail.scss';
+import localStorage from '../services/localStorage';
 
 function CharacterDetail({ characters }) {
   const { id } = useParams();
-  const characterData = characters.find((character) => {
-    return character.id === parseInt(id);
-  });
+  const [characterData, setCharacterData] = useState(null);
+
+  useEffect(() => {
+    const savedCharacter = localStorage.get('character');
+    if (savedCharacter && savedCharacter.id === parseInt(id)) {
+      setCharacterData(savedCharacter);
+    } else {
+      const foundCharacter = characters.find((character) => character.id === parseInt(id));
+      if (foundCharacter) {
+        localStorage.set('character', foundCharacter);
+        setCharacterData(foundCharacter);
+      }
+    }
+  }, [characters, id]);
+
+  if (!characterData) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="detail">

@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import '../styles/core/reset.scss';
 import '../styles/App.scss';
 import getCharacters from '../services/api';
-// import localStorage from '../services/localStorage';
 import Header from './Header';
 import FilterName from './FilterName';
 import FilterGender from './FilterGender';
