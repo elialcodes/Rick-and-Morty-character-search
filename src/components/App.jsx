@@ -60,7 +60,7 @@ const App = () => {
             path="/"
             element={
               <>
-                <h2 className="title">Search your favorite character</h2>
+                <h1 className="title">Search your favorite character</h1>
                 <form className="filters">
                   <FilterName onChangeFilterName={handleFilterName} valueName={filterName} />
                   <FilterGender
