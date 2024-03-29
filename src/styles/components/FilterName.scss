@@ -7,6 +7,7 @@
 
   &-label {
     margin-right: 20px;
+
     @media (min-width: 768px) {
       margin-right: 20px;
     }
@@ -19,6 +20,7 @@
     color: lightgreen;
     border: 2px solid aqua;
     padding: 5px;
+
     @media (min-width: 768px) {
       width: 250px;
     }

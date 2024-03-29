@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import '../styles/components/CharacterList.scss';
 import CharacterCard from './CharacterCard';
+import '../styles/components/CharacterList.scss';
 
 function CharacterList({ dataCharacters, notFoundCharacters }) {
   return (

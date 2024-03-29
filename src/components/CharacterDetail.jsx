@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import '../styles/components/CharacterDetail.scss';
 import localStorage from '../services/localStorage';
+import '../styles/components/CharacterDetail.scss';
 
 function CharacterDetail({ characters }) {
   const { id } = useParams();

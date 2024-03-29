@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import '../styles/core/reset.scss';
-import '../styles/App.scss';
 import getCharacters from '../services/api';
 import Header from './Header';
 import FilterName from './FilterName';
 import FilterGender from './FilterGender';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
+import '../styles/core/reset.scss';
+import '../styles/App.scss';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);

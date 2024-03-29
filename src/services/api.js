@@ -1,13 +1,9 @@
-// Fichero src/services/api.js
-
 const getCharacters = () => {
-  // Llamamos a la API
   return fetch(
     'https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json'
   )
     .then((response) => response.json())
     .then((data) => {
-      // Cuando responde la API podemos limpiar los datos aquí, aunque no es obligatorio
       const charactersFromAppi = data.results.map((character) => {
         return {
           id: character.id,
@@ -20,6 +16,7 @@ const getCharacters = () => {
           episode: character.episode,
         };
       });
+
       charactersFromAppi.sort((a, b) => {
         if (a.name < b.name) {
           return -1;
