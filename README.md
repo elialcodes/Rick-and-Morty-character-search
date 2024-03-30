@@ -18,7 +18,7 @@
 
 - Extras y Bonus:
 
-  Se ha pensado en la experiencia de usuario, por eso la aplicación web tiene unos extas:
+  Se ha pensado en la experiencia de usuario, por eso la aplicación web tiene unos extras:
 
   - Diseño responsive apto para todo tipo de dispositivos.
 
