@@ -13,10 +13,10 @@ function CharacterDetail({ characters }) {
   const characterData =
     savedCharacter && parseInt(savedCharacter.id) === parseInt(id)
       ? savedCharacter
-      : characters.find((character) => character.id === parseInt(id));
+      : characters.find((character) => parseInt(character.id) === parseInt(id));
 
   useEffect(() => {
-    if (characterData && savedCharacter.id !== characterData.id) {
+    if (characterData && (!savedCharacter || savedCharacter.id !== characterData.id)) {
       localStorage.set('character', characterData);
     }
   }, [savedCharacter, characterData]);

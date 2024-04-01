@@ -4,9 +4,9 @@ import '../styles/components/CharacterCard.scss';
 
 function CharacterCard({ character }) {
   return (
-    <li className="card">
+    <li>
       <Link to={`/characterDetail/${character.id}`}>
-        <div>
+        <div className="card">
           <figure>
             <img src={character.image} alt={character.name} />
           </figure>
