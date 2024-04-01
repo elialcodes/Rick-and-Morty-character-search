@@ -1,7 +1,7 @@
 .form__name {
+  margin-bottom: 8px;
   color: white;
   background-color: black;
-  margin-bottom: 8px;
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -18,11 +18,11 @@
   &-input {
     width: 200px;
     margin-bottom: 10px;
-    background-color: black;
+    padding: 5px;
     font-size: 18px;
     color: lightgreen;
+    background-color: black;
     border: 2px solid aqua;
-    padding: 5px;
 
     @media (min-width: 768px) {
       width: 250px;

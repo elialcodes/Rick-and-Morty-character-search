@@ -20,11 +20,10 @@
   }
 
   &__message-noFound {
+    padding: 0px 10px 300px 10px;
     font-size: 20px;
-    padding: 0px 10px;
     color: red;
     text-align: center;
-    padding-bottom: 100px;
 
     @media (min-width: 768px) {
       font-size: 25px;

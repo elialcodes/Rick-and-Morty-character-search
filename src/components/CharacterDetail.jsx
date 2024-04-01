@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
+import localStorage from '../services/localStorage';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import localStorage from '../services/localStorage';
 import '../styles/components/CharacterDetail.scss';
 
 function CharacterDetail({ characters }) {
   const { id } = useParams();
 
   const savedCharacter = localStorage.get('character');
+
   const characterData =
     savedCharacter && parseInt(savedCharacter.id) === parseInt(id)
       ? savedCharacter
