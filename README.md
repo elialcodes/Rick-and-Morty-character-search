@@ -2,6 +2,8 @@
 
 ¡Bienvenido al Buscador de Personajes de Rick and Morty! Esta aplicación web te permite explorar y aprender sobre varios personajes de la popular serie de televisión animada "Rick and Morty".
 
+url: https://elialcodes.github.io/Rick-and-Morty-character-search/
+
 - Características:
 
   - Búsqueda: encuentra rápidamente personajes escribiendo su nombre en la barra de búsqueda.
