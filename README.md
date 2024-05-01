@@ -1,4 +1,4 @@
-## Rick and Morty Character Search :alien: :earth_americas: :rocket: :ringed-planet:
+## Rick and Morty Character Search :alien: :earth_americas: :rocket: 🪐
 
 
 Welcome to Rick and Morty Character Finder! This web application allows you to explore and learn about various characters from the popular animated television series "Rick and Morty".
