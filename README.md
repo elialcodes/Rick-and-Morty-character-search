@@ -27,13 +27,9 @@ User experience has been thought about, that's why the web application has some 
 - Frontend: HTML, CSS, JavaScript and React.
 - Backend: API that fetches data from characters, allowing for fast searching and filtering.
 
-## API Reference
+## API Reference 🔗
 
-#### Get all items
-
-```http
-  fetch('https://rickandmortyapi.com/api/character')
-```
+https://rickandmortyapi.com/api/character
 
 
 ## Links 🔗
