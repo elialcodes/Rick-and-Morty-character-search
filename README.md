@@ -22,10 +22,26 @@ User experience has been thought about, that's why the web application has some 
 - In the header, the logo is clickable and leads to the start of the web application
 - React Router Dom handling for an improved user experience.
 
-## Tech Stack 💻 📚
+## Tech Stack 📚
 
 - Frontend: HTML, CSS, JavaScript and React.
 - Backend: API that fetches data from characters, allowing for fast searching and filtering.
+
+
+## Installation 💻 
+
+- Clone the repository: https://github.com/elialcodes/Rick-and-Morty-character-search.git
+- Install node_modules folder: 
+
+```bash
+  npm install
+```
+- Start the project: 
+
+```bash
+  npm run dev
+```
+
 
 ## API Reference 🔗
 
