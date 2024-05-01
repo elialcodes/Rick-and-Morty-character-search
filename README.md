@@ -1,17 +1,17 @@
-## Rick and Morty Character Search
+## Rick and Morty Character Search :alien: :earth_americas: :rocket: :ringed-planet:
 
 
 Welcome to Rick and Morty Character Finder! This web application allows you to explore and learn about various characters from the popular animated television series "Rick and Morty".
 
 
-## Features
+## Features :star:
 
 - Search: quickly find characters by typing their name in the search bar
 - Filtering: refine your search results by applying filters such as character name and gender
 - Character Details: each character contains a link that will take you to a detail view that includes character image, its species, dimension of origin, status and additional information such as gender and location.
 
 
-## Extras
+## Extras :1st_place_medal:
 
 User experience has been thought about, that's why the web application has some extras:
 - Responsive design suitable for all types of devices
@@ -22,12 +22,12 @@ User experience has been thought about, that's why the web application has some 
 - In the header, the logo is clickable and leads to the start of the web application
 - React Router Dom handling for an improved user experience.
 
-## Tech Stack
+## Tech Stack 💻 📚
 
-Frontend: HTML, CSS, JavaScript and React.
-Backend: API that fetches data from characters, allowing for fast searching and filtering.
+- Frontend: HTML, CSS, JavaScript and React.
+- Backend: API that fetches data from characters, allowing for fast searching and filtering.
 
 
-## 🔗 Links
+## Links 🔗
 
 https://elialcodes.github.io/Rick-and-Morty-character-search/
