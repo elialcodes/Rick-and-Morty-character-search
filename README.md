@@ -32,7 +32,7 @@ User experience has been thought about, that's why the web application has some 
 #### Get all items
 
 ```http
-  fetch('https://rickandmortyapi.com/api/character')
+  fetch  'https://rickandmortyapi.com/api/character'
 ```
 
 
