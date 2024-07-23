@@ -50,4 +50,4 @@ https://rickandmortyapi.com/api/character
 
 ## Links 🔗
 
-https://elialcodes.github.io/Rick-and-Morty-character-search/
+https://rick-and-morty-character-search.vercel.app/
